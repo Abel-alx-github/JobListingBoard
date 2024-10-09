@@ -45,11 +45,13 @@ A web application built with React and Firebase for managing and viewing job lis
    git clone https://github.com/Abel-alx-github/JobListingBoard.git
 
 Navigate to the project directory:
-` cd job-listing-app
-
+  ```bash
+   cd job-listing-app
+```
 Install dependencies:
-` npm install
-
+  ```bash
+   npm install
+```
 Set up Firebase configuration:
 Create a .env file in the root directory and add your Firebase configuration:
 ```
@@ -61,6 +63,6 @@ REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
 REACT_APP_FIREBASE_APP_ID=your_app_id
 ```
 Start the development server:
-```
+```bash
 npm start
-
+```
