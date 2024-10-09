@@ -43,7 +43,8 @@ const hideMenu = () => {
           {!jobFinder && <li><NavLink to='/about'>About Us</NavLink></li>}
           <li><NavLink to='/contact'>Contact</NavLink></li>
           <li><NavLink to ='/login'>Login</NavLink></li>
-          <li><NavLink to="/signup">Sign Up</NavLink></li>
+          <li id="button-nav" ><NavLink to="/signup" >Sign Up</NavLink></li>
+          <li className={styles.navDivider}></li>
           <li onClick={ () => setJobFinder(!jobFinder)}>{jobFinder ? <NavLink to='/'>Are you Recruter?</NavLink> : <NavLink to='/'>For Candidate</NavLink>}</li>  
           {/* <li><NavLink>Employers, Are you recruiting</NavLink></li> */}
         </ul>
