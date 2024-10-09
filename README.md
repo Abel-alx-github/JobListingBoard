@@ -43,7 +43,7 @@ A web application built with React and Firebase for managing and viewing job lis
 
    ```bash
    git clone https://github.com/Abel-alx-github/JobListingBoard.git
-
+  
 Navigate to the project directory:
   ```bash
    cd job-listing-app
