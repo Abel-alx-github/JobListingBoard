@@ -1,8 +1,94 @@
-.homeContainer {
-    width: 100%;
-    // top: 85px;
-    position: relative;
-    // background: red;
-
+.row {
+    // width: 100%;
+    // position: relative;
+    min-height: 50vh;
     padding: 85px 0 30px;
+    // background: red;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    .col2{
+        width: calc(50% - 1rem);
+    }
+    .col2:nth-child(1) {
+        padding: 0 3rem;
+        .heroTitle {
+            font-size: var(--font-size-xx-large);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-green);
+
+            margin-top:5rem;
+        }
+
+        .heroTagline {
+            font-size: var(--font-size-x-large);
+            // margin-bottom: 2rem;
+        }
+        .heroBtn {
+            display: inline-block;
+            background: var(--color-green);
+            border-radius: 5rem;
+            padding: .8rem 3rem;
+            margin: 1rem 0;
+            color: var(--color-white);
+            font-size: var(--font-size-medium);
+        }
+
+        .heroSearch {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            // background: red;
+            margin: 1rem 0;
+
+            .heroSearchToggle {
+                align-self: flex-end;
+                a{
+                    margin-right: 1rem;
+                    font-weight: bold;       
+                }
+
+            }
+            .heroSearchContainer{
+                width: 100%;
+                overflow: hidden;
+                border-radius: 5rem;
+                // padding-left: 1rem 3rem;
+                border: .3rem solid var(--color-green);
+                display: flex;
+                justify-content:space-between;
+                align-items: center;              
+                i{
+                    padding:.5rem;
+                    background:red;
+                }
+                input {
+                    border: none;
+                    background:yellow;
+                    padding:1rem 0;
+                    // flex:1;
+                    font-size: var(--font-size-medium);
+                    outline: none;
+                }
+                button {
+                    color: var(--color-white);
+                    background: var(--color-blue);
+                    border: .5rem solid var(--color-blue);
+                    border-radius: 5rem;
+                    padding: .5rem 2.5rem;
+                    margin: .5rem;
+                }
+            }
+        }
+
+        // background: blue;
+    }
+
+    @media screen and (max-width : 767px) {
+        flex-direction: column;
+        .col2{
+            width: 100%;
+        }
+    }
 }
+
