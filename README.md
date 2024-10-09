@@ -1,4 +1,6 @@
 # Job Listing Web App
+> **🚧 WIP: Work In Progress 🚧**  
+> This project is currently under development. Features and functionalities are being added regularly.
 
 A web application built with React and Firebase for managing and viewing job listings. This project serves as a platform for job seekers to browse available positions and for employers to post job offers.
 
