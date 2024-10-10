@@ -1,28 +1,74 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styles from './Home.module.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import bannerGif from "../../Assets/bannerGif.gif";
+import item0 from '../../Assets/sliderItem0.png'
+import item1 from '../../Assets/slideritem1.png'
+import item2 from '../../Assets/slideritem2.png'
+import item3 from '../../Assets/slideritem3.png'
+import item4 from '../../Assets/slideritem4.png'
+import item5 from '../../Assets/slideritem5.png'
+import item6 from '../../Assets/slideritem6.png'
+
 export default function Home() {
+  const [isJob, setIsJob] = useState(true);
+ 
   return (
     <div className='container'>
-        <div className={`${styles.row}  `} >
+       <div className={styles.heroContainer}>
+       <div className={`${styles.row}  `} >
           <div className={styles.col2}>
             <h1 className={styles.heroTitle}>Remote Jobs</h1>
             <p className={styles.heroTagline}>Unlock Your Career Potential</p>
             <a href="#" className={styles.heroBtn}>Get Started</a>
             <div className={styles.heroSearch}>
               <div className={styles.heroSearchToggle}>
-                <a href="#">Jobs</a><a href="#">Companies</a>
+                <a className={`${isJob? styles.active: ''}`} href="#" onClick={()=> setIsJob(true)}>Jobs</a>
+                <a className={`${!isJob? styles.active: ''}`} href="#" onClick={()=> setIsJob(false)}>Companies</a>
               </div>
               <div className={styles.heroSearchContainer}>
-                <i className='fas faSearch'></i>
-                <input type="text" placeholder="Search for job title, company, or location" />
-                <button>Search</button>
+                <i><FontAwesomeIcon icon={faSearch} /></i>
+                <input type="text" placeholder={`${"Search for"}  ${isJob ? "jobs" : "companies"}`} />
+                <button type="search">Search</button>
               </div>
             </div>
           </div>
-          <div className={styles.col2}>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, commodi? Iusto placeat reprehenderit deserunt aliquam alias quae, nulla illum vero maxime, corrupti voluptatibus quisquam praesentium ratione. Fugiat enim, excepturi, iste necessitatibus officiis quisquam, harum omnis qui repellat quia eos vitae laborum cumque atque quibusdam. Quod, molestias? Nihil ipsam esse deleniti qui amet earum nesciunt iste voluptas rerum, ut incidunt reprehenderit architecto ratione dolorum placeat autem dicta nostrum at quo inventore officia, explicabo numquam atque dignissimos! Ad omnis perferendis magni, impedit nulla culpa laboriosam officiis quae, nam dolorem quaerat consequuntur possimus corporis sit maiores. Iusto unde tempore aliquam adipisci, at eum molestias odit modi iure! Pariatur, fuga laboriosam quia dolor corrupti nisi doloribus perferendis amet sit, quos accusamus sunt. Harum expedita at sunt amet eaque exercitationem, numquam iusto deserunt est soluta, temporibus sapiente velit necessitatibus. Impedit veniam eveniet sint iure cum accusantium reprehenderit natus doloremque, labore id ipsum, amet modi incidunt exercitationem hic? Quidem consequuntur explicabo itaque porro repudiandae vel consectetur perferendis quasi obcaecati a ducimus officia, omnis libero quibusdam incidunt consequatur, dolore laborum excepturi? Dicta, perspiciatis nostrum! Alias vel ipsa ex cumque non totam delectus sunt possimus officia, velit rem exercitationem magnam maxime quisquam repudiandae corrupti autem praesentium laudantium. Exercitationem.</p>
+          <div className={`${styles.col2} ${styles.heroImg}`}>
+            <div className={styles.img}></div> 
           </div>
 
+        </div>
+        </div>  
+        <div className={styles.bannerGif}>
+          <img src={bannerGif} alt="Expo banner 2024" />
+        </div>
+        <div className={styles.sliderContainer}>
+          <div className={styles.slider}>
+          <img  className={styles.slideItem} src={item0} alt="" />
+          <img  className={styles.slideItem} src={item1} alt="" />
+          <img  className={styles.slideItem} src={item2} alt="" />
+          <img  className={styles.slideItem} src={item3} alt="" />
+          <img  className={styles.slideItem} src={item4} alt="" />
+          <img  className={styles.slideItem} src={item5} alt="" />
+          <img  className={styles.slideItem} src={item6} alt="" />
+          <img  className={styles.slideItem} src={item0} alt="" />
+          <img  className={styles.slideItem} src={item1} alt="" />
+          <img  className={styles.slideItem} src={item2} alt="" />
+          <img  className={styles.slideItem} src={item3} alt="" />
+          <img  className={styles.slideItem} src={item4} alt="" />
+          <img  className={styles.slideItem} src={item5} alt="" />
+          <img  className={styles.slideItem} src={item6} alt="" />
+        
+          <img  className={styles.slideItem} src={item0} alt="" />
+          <img  className={styles.slideItem} src={item1} alt="" />
+          <img  className={styles.slideItem} src={item2} alt="" />
+          <img  className={styles.slideItem} src={item3} alt="" />
+          <img  className={styles.slideItem} src={item4} alt="" />
+          <img  className={styles.slideItem} src={item5} alt="" />
+          <img  className={styles.slideItem} src={item6} alt="" />
+        
+          </div>
         </div>
       </div>
   )
