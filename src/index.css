@@ -4,10 +4,13 @@
   --color-black: #121212;
   --color-white: #fff;
   --color-red : #f10000;
+--color-gray : #f4f8f9;
+
 
   --text-color: var(--color-black);
   --valid-color: var(--color-green);
   --error-color: var(--color-red);
+  --card-bg-color: var(--color-gray);
 
   /* font-family */
   --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
